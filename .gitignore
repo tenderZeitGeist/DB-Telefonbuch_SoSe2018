@@ -62,7 +62,6 @@ nb-configuration.xml
 ######################
 # IDEA
 ######################
-*.iml
 *.ipr
 *.iws
 .idea/
