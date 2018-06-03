@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 import util.User;
 import util.LoginValidator;
 
-@WebServlet(urlPatterns = {"/login"})
+@WebServlet()
 public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {

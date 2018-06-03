@@ -1,3 +1,5 @@
+<%@ page import="util.User" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: Manic
@@ -10,16 +12,22 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Test</title>
+    <%@ include file="common/header.jsp" %>
+    <title>Index</title>
 </head>
 <body>
-<form method="post" action="/login">
-    Email ID:<input type="text" name="email" value="test"/><br/>
-    Password:<input type="text" name="pass" value="pass"/><br/>
-    <input type="submit" value="Login" />
-</form>
 
-<%--<jsp:include page="/hello" />--%>
+    <%
+        /*HttpSession session = request.getSession();*/
+        User user = (User) session.getAttribute("loggedInUser");
 
+        if (user == null) {
+            response.sendRedirect("/login");
+        } else {
+            response.sendRedirect("/overview");
+        }
+    %>
+
+    <%@ include file="common/footer.jsp" %>
 </body>
 </html>

@@ -6,33 +6,23 @@
 
     <display-name>Telefonbuch</display-name>
 
-    <!--<servlet>
-        <servlet-name>Login</servlet-name>
-        <servlet-class>LoginServlet</servlet-class>
-        <load-on-startup>0</load-on-startup>
-    </servlet>
     <servlet>
-        <servlet-name>Welcome</servlet-name>
-        <servlet-class>WelcomeServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
+        <servlet-name>login</servlet-name>
+        <jsp-file>/login.jsp</jsp-file>
     </servlet>
-    <servlet>
-        <servlet-name>Hello</servlet-name>
-        <servlet-class>HwSVL</servlet-class>
-        <load-on-startup>2</load-on-startup>
-    </servlet>
-
     <servlet-mapping>
-        <servlet-name>Login</servlet-name>
+        <servlet-name>login</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>overview</servlet-name>
+        <jsp-file>/overview.jsp</jsp-file>
+    </servlet>
     <servlet-mapping>
-        <servlet-name>Welcome</servlet-name>
-        <url-pattern>/welcome</url-pattern>
+        <servlet-name>overview</servlet-name>
+        <url-pattern>/overview</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Hello</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>-->
+
 
 </web-app>

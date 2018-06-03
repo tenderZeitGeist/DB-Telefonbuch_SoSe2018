@@ -15,7 +15,7 @@ import java.io.PrintWriter;
 import java.util.LinkedList;
 import java.util.List;
 
-@WebServlet(urlPatterns = {"/overview"})
+@WebServlet()
 public class OverviewServlet extends HttpServlet {
     private static final long serialVersionUID = 2L;
 
@@ -30,9 +30,9 @@ public class OverviewServlet extends HttpServlet {
          HttpSession session = request.getSession();
          User user = (User) session.getAttribute("loggedInUser");
 
-         if (user == null) {
-             response.sendRedirect("/");
-         } else {
+             if (user == null) {
+                 response.sendRedirect("/");
+             } else {
              response.setContentType("text/html;charset=UTF-8");
              PrintWriter out = response.getWriter();
              out.println("Welcome user: " + session.getId() + "</br> </br>");
