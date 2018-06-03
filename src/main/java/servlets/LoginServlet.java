@@ -36,11 +36,17 @@ public class LoginServlet extends HttpServlet {
 
         if(user != null) {
 
-            response.sendRedirect("/welcome");
+            response.sendRedirect("/overview");
             request.changeSessionId();
 
         } else {
-            out.println("Name oder Passwort falsch");
+            out.println("Name oder Passwort falsch </br> </br>");
+
+            out.print("<form method=\"post\" action=\"/login\">\n" +
+                    "    Email ID:<input type=\"text\" name=\"email\" value=\"test\"/><br/>\n" +
+                    "    Password:<input type=\"text\" name=\"pass\" value=\"pass\"/><br/>\n" +
+                    "    <input type=\"submit\" value=\"Login\" />\n" +
+                    "</form>");
         }
 
     }
