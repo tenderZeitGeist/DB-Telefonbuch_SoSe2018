@@ -64,6 +64,7 @@ nb-configuration.xml
 ######################
 *.ipr
 *.iws
+.idea/*.*
 atlassian-ide-plugin.xml
 
  
