@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="DB-Telefonbuch_SoSe2018:war exploded">
+    <output-path>$PROJECT_DIR$/target/artifacts/DB_Telefonbuch_SoSe2018_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="DB-Telefonbuch_SoSe2018/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="DB-Telefonbuch_SoSe2018" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
