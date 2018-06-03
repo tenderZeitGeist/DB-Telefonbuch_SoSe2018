@@ -64,7 +64,6 @@ nb-configuration.xml
 ######################
 *.ipr
 *.iws
-.idea/*.*
 atlassian-ide-plugin.xml
 
  
@@ -113,3 +112,9 @@ derby.log
 
 log/
 target/
+.idea/compiler.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/uiDesigner.xml
+.idea/vcs.xml
+.idea/workspace.xml
