@@ -9,5 +9,6 @@
 
 <hr>
 
-<a href="<c:url value="/login"/>">Login</a><br>
+<a href="<c:url value="/logout"/>">Logout</a>
+ ||
 <a href="<c:url value="/overview"/>">Overview</a>
