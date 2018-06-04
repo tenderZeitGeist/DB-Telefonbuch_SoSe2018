@@ -12,6 +12,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <html>
 <head>
@@ -47,8 +48,8 @@
     </tr>
     <c:forEach items="${entries}" var="entry">
     <tr>
-        <td>${entry.name}</td>
-        <td>${entry.phone}</td>
+        <td><c:out value="${fn:substringAfter(entry.name, \" \")}, ${fn:substringBefore(entry.name, \" \")}"/></td>
+        <td><c:out value="(${fn:substring(entry.phone, 0, 4)}) ${fn:substring(entry.phone, 4, fn:length(entry.phone))}"/></td>
         <td>${entry.address}</td>
     </tr>
     </c:forEach>
