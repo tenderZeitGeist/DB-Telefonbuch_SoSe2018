@@ -50,6 +50,7 @@ nb-configuration.xml
 atlassian-ide-plugin.xml
 target/
 out/
+.idea/
 
  
 ######################

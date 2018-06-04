@@ -28,4 +28,18 @@
     <!--
     <Manager pathname="" />
     -->
+
+    <Resource
+            name="jdbc/phonebookDB"
+            auth="Container"
+            type="javax.sql.DataSource"
+            maxActive="100"
+            maxIdle="30"
+            maxWait="10000"
+            driverClassName="com.mysql.jdbc.Driver"
+            url="jdbc:mysql://localhost:3306/phonebookDB"
+            username="phone"
+            password="secret"
+
+    />
 </Context>

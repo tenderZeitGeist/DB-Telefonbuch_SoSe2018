@@ -1,31 +1,19 @@
-<%@ page import="util.Entry" %>
 <%@ page import="util.User" %>
-<%@ page import="java.util.LinkedList" %>
 
-<%--
-  Created by IntelliJ IDEA.
-  User: Manic
-  Date: 03.06.2018
-  Time: 19:43
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="sql" uri="http://java.sun.com/jstl/sql" %>
 
 <html>
 <head>
     <%@ include file="common/header.jsp" %>
     <title>Overview</title>
 
-    <%
-        LinkedList<Entry> entries = new LinkedList<>();
-        request.setAttribute("entries", entries);
-
-        entries.add(new Entry("Max Mustermann", "0123 456789", "Musterstraße 1, 1234 Musterstadt"));
-        entries.add(new Entry("Bettina Beispielfrau", "0987 654321", "Beispielboulevard 9, 5678 Beispielsburg"));
-    %>
+    <sql:query var="entries" dataSource="jdbc/phonebookDB">
+        select name, phone, address from entries;
+    </sql:query>
 
 </head>
 <body>
@@ -46,7 +34,7 @@
         <th>Phone</th>
         <th>Address</th>
     </tr>
-    <c:forEach items="${entries}" var="entry">
+    <c:forEach items="${entries.rows}" var="entry">
     <tr>
         <td><c:out value="${fn:substringAfter(entry.name, \" \")}, ${fn:substringBefore(entry.name, \" \")}"/></td>
         <td><c:out value="(${fn:substring(entry.phone, 0, 4)}) ${fn:substring(entry.phone, 4, fn:length(entry.phone))}"/></td>
