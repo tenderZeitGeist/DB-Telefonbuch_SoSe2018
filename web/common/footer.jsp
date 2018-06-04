@@ -9,6 +9,10 @@
 
 <hr>
 
-<a href="<c:url value="/logout"/>">Logout</a>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<a href="<c:url value="/logout.jsp"/>">Logout</a>
  ||
-<a href="<c:url value="/overview"/>">Overview</a>
+<a href="<c:url value="/overview.jsp"/>">Overview</a>
+ ||
+<a href="<c:url value="/hello.jsp"/>">Hello World!</a>
