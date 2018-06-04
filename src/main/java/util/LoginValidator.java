@@ -10,7 +10,7 @@ public class LoginValidator {
 
         if (email!= null && email.equals(mailCompare)){
             if (pass.equals(passCompare)){
-                return new User("test", "pass");
+                return new User("","test", "pass");
             } else {
                 return null;
             }
