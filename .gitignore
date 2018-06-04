@@ -48,8 +48,8 @@ nb-configuration.xml
 *.ipr
 *.iws
 atlassian-ide-plugin.xml
-.target/
-.out/
+target/
+out/
 
  
 ######################
