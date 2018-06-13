@@ -21,7 +21,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>overview</servlet-name>
-        <url-pattern>/overview</url-pattern>
+        <url-pattern>/login/overview</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -41,6 +41,26 @@
         <servlet-name>hello</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>newspage</servlet-name>
+        <jsp-file>/newspage.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>newspage</servlet-name>
+        <url-pattern>/newspage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>foreign-policy</servlet-name>
+        <jsp-file>/foreignpolicy.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>foreign-policy</servlet-name>
+        <url-pattern>/newspage/foreign-policy</url-pattern>
+    </servlet-mapping>
+    
+
 
 
     <!--Datenbankverbindung-->

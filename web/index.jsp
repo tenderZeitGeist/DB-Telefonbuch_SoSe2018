@@ -24,7 +24,7 @@
         if (user == null) {
             response.sendRedirect("/login");
         } else {
-            response.sendRedirect("/overview");
+            response.sendRedirect( request.getContextPath() + "/overview");
         }
     %>
 

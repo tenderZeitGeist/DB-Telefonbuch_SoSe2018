@@ -58,7 +58,7 @@
 
         if(user != null) {
 
-            response.sendRedirect("/overview");
+            response.sendRedirect("/login/overview");
             request.changeSessionId();
 
         } else {
