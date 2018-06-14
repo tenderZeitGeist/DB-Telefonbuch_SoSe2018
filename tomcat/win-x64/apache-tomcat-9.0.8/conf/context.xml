@@ -37,7 +37,7 @@
             maxIdle="30"
             maxWait="10000"
             driverClassName="com.mysql.jdbc.Driver"
-            url="jdbc:mysql://localhost:3306/phonebookDB"
+            url="jdbc:mysql://localhost:3306/phonebookDB?&amp;serverTimezone=UTC&amp;useSSL=false"
             username="phone"
             password="secret"
 
