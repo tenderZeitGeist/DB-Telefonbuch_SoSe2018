@@ -12,20 +12,36 @@
 
     <style>
 
+        .trump {
+            max-width: 40em;
+            height: auto;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
         .newsarticle {
             margin: 0 auto;
             width: 40em;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        p {
             font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
             font-size: large;
+            text-align-all: justify;
         }
 
     </style>
 
 </head>
 <body>
+
+<div id="picture" class="picture">
+    <img src="../resources/gettyimages-971754092.jpg" class="trump">
+</div>
 
 <div id="newsarticle" class="newsarticle">
     <p>

@@ -44,7 +44,7 @@
 
     <servlet>
         <servlet-name>newspage</servlet-name>
-        <jsp-file>/newspage.jsp</jsp-file>
+        <jsp-file>/newspaper/newspage.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>newspage</servlet-name>
@@ -53,11 +53,20 @@
 
     <servlet>
         <servlet-name>foreign-policy</servlet-name>
-        <jsp-file>/foreignpolicy.jsp</jsp-file>
+        <jsp-file>/newspaper/foreignpolicy.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>foreign-policy</servlet-name>
         <url-pattern>/newspage/foreign-policy</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>article</servlet-name>
+        <jsp-file>/newspaper/article.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>article</servlet-name>
+        <url-pattern>/newspage/article</url-pattern>
     </servlet-mapping>
     
 
