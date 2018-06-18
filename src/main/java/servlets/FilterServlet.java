@@ -17,27 +17,31 @@ public class FilterServlet implements Filter {
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws ServletException, IOException {
 
-        String replacedContent;
+        String responseContent;
         HtmlResponseWrapper capturingResponseWrapper = new HtmlResponseWrapper((HttpServletResponse) res);
+        HtmlRequestWrapper capturingRequestWrapper =  new HtmlRequestWrapper((HttpServletRequest) req);
 
-        chain.doFilter(req, capturingResponseWrapper);
+        // Filtering and chaining the request and response
+        capturingRequestWrapper.replaceLetters();
+        chain.doFilter(capturingRequestWrapper, capturingResponseWrapper);
 
-        if (res.getContentType() != null) {
+        if (res.getContentType() != null ) {
 
             String content = capturingResponseWrapper.getCaptureAsString();
 
             // replace stuff here
             if (content.contains("k")) {
 
-                replacedContent = content.replaceAll(
+                responseContent = content.replaceAll(
                         "k",
                         "c");
 
             } else if (content.contains("K")) {
 
-                replacedContent = content.replaceAll(
+                responseContent = content.replaceAll(
                         "K",
                         "C");
+
 
             } else {
 
@@ -45,12 +49,9 @@ public class FilterServlet implements Filter {
 
             }
 
-            chain.doFilter();
+            // System.out.println(responseContent);
 
-            System.out.println(replacedContent);
-
-            res.getWriter().write(replacedContent);
-
+            res.getWriter().write(responseContent);
 
         }
     }
