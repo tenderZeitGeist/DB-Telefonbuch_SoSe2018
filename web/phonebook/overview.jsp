@@ -8,7 +8,7 @@
 
 <html>
 <head>
-    <%@ include file="common/header.jsp" %>
+    <%@ include file="../common/header.jsp" %>
     <title>Overview</title>
 
     <sql:query var="entries" dataSource="jdbc/phonebookDB">
@@ -44,6 +44,6 @@
 </table>
 <%}%>
 
-<%@ include file="common/footer.jsp" %>
+<%@ include file="../common/footer.jsp" %>
 </body>
 </html>

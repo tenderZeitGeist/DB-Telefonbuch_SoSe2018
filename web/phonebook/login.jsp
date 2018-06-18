@@ -12,7 +12,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <%@ include file="common/header.jsp" %>
+    <%@ include file="../common/header.jsp" %>
     <title>Login</title>
 
 </head>
@@ -84,6 +84,6 @@
         <input type="submit" value="Login" />
     </form>
 
-    <%@ include file="common/footer.jsp" %>
+    <%@ include file="../common/footer.jsp" %>
 </body>
 </html>

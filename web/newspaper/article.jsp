@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%@ include file="/common/header.jsp" %>
     <title>article</title>
 
     <style>
@@ -47,6 +48,6 @@
         ‘Desire Paths’ by very definition are the story of Technimatic’s Pete Rogers and Andy Powell. They are the trails created by human endeavour and choices, the route travelled between origin and destination, the reason the duo’s enchanting debut solo album is ready to be released. Now fully fledged members of the Shogun Audio family, it has been Technimatic’s unprecedented determination and talent that has seen them carve their own desire paths up until this very moment. Delivering an LP of beautifully hand- crafted, soulful drum & bass music you can’t help but wonder where their next journey will take them… ‘Desire Paths’.
     </p>
 </div>
-
+<%@ include file="/common/footer.jsp" %>
 </body>
 </html>
