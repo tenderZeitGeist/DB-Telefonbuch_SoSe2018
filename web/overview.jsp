@@ -22,7 +22,7 @@
     User user = (User) session.getAttribute("loggedInUser");
 
     if (user == null) {
-        response.sendRedirect("/login");
+        response.sendRedirect("/telefonbuch/login");
     } else {
         request.changeSessionId();
 

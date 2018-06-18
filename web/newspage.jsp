@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%@ include file="common/header.jsp" %>
     <title>Newspage</title>
 </head>
 <body>
@@ -17,5 +18,6 @@
 <p>
     <a href="/newspage/foreign-policy">Trump is meeting up with Kim Jong-un!</a>
 </p>
+<%@ include file="common/footer.jsp" %>
 </body>
 </html>

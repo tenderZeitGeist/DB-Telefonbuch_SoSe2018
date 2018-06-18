@@ -58,7 +58,7 @@
 
         if(user != null) {
 
-            response.sendRedirect("/login/overview");
+            response.sendRedirect("/telefonbuch/overview");
             request.changeSessionId();
 
         } else {
@@ -72,7 +72,7 @@
 %>
 
 <body>
-    <form method="post" action="<c:url value="/login"/>">
+    <form method="post" action="<c:url value="/telefonbuch/login"/>">
         <label>
             Email ID:
             <input type="text" name="email" value="test"/>

@@ -33,9 +33,9 @@
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<a href="<c:url value="logout"/>">Logout</a>
+<a href="<c:url value="/telefonbuch/logout"/>">Logout</a>
 
-<a href="<c:url value="/login/overview"/>">Overview</a>
+<a href="<c:url value="/telefonbuch/overview"/>">Overview</a>
 
 <a href="<c:url value="/hello"/>">Hello World!</a>
 
